@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Force Java 11 for Spark 3.3.x
+export JAVA_HOME="/opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+# Prevent your global Spark 4 from being used
+unset SPARK_HOME
+unset PYSPARK_SUBMIT_ARGS
+
+exec pipenv run "$@"
+
