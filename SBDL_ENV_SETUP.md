@@ -107,6 +107,12 @@ Expected output:
 1 passed
 ```
 
+Run main or any other script:
+
+```
+./run_sbdl.sh python sbdl_main.py local 2022-08-02
+```
+
 ---
 
 ## Exit Virtual Environment
